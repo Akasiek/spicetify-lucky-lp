@@ -8,7 +8,7 @@ Lucky LP is a Spicetify Extension which allows to easily choose random album fro
 ### Linux/MacOS
 
 ```bash
-wget https://raw.githubusercontent.com/akasiek/spicetify-lucky-lp/main/LuckyLP.js
+wget https://raw.githubusercontent.com/Akasiek/spicetify-lucky-lp/main/LuckyLP.js
 mv ./LuckyLP.js ~/.config/spicetify/Extensions/
 spicetify config extensions LuckyLP.js
 spicetify apply
@@ -17,7 +17,7 @@ spicetify apply
 ### Windows
 
 ```powershell
-wget https://raw.githubusercontent.com/akasiek/spicetify-lucky-lp/main/LuckyLP.js
+wget https://raw.githubusercontent.com/Akasiek/spicetify-lucky-lp/main/LuckyLP.js
 Move-Item -Path .\LuckyLP.js -Destination %appdata%\spicetify\Extensions\
 spicetify config extensions LuckyLP.js
 spicetify apply
