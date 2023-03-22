@@ -1,0 +1,23 @@
+/* C:/Users/kpomy/AppData/Local/Temp/tmp-23088-2dXK3DES1hPc/1870b3f65aa0/style.css */
+.random-saved-album-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 8px;
+}
+.random-saved-album-container button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+  color: rgba(var(--spice-rgb-selected-row), 0.7);
+  background-color: transparent;
+  border: none;
+}
+.random-saved-album-container button:hover {
+  background-color: rgba(var(--spice-rgb-selected-row), 0.1);
+  border-radius: 50%;
+  color: var(--spice-text);
+}

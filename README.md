@@ -1,13 +1,8 @@
-# Spicetify Creator
+# Lucky LP - Spicetify Extension
 
-Spicetify Creator is a tool to compile modern Typescript/Javascript code to Spicetify extensions and custom apps.
+## Installation
 
-## Features
-- Typescript and React syntax
-- Import node packages
-- CSS/SCSS with PostCSS support
-- Extremely fast compile time with esbuild.
-- Plugins
+I super simple. Just put the `lucky-lp.js` file in your
 
 ## Docs
 Check out [Spicetify's docs](https://spicetify.app/docs/development/spicetify-creator/the-basics)!
