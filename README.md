@@ -14,7 +14,7 @@ spicetify config extensions LuckyLP.js
 spicetify apply
 ```
 
-### Windows
+### Windows (Powershell)
 
 ```powershell
 wget https://raw.githubusercontent.com/Akasiek/spicetify-lucky-lp/main/LuckyLP.js
