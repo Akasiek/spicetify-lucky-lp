@@ -1,6 +1,6 @@
 {
-  "name": "random_saved_album",
-  "version": "0.1.0",
+  "name": "lucky-lp",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "spicetify-creator",
