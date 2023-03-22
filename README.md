@@ -25,7 +25,7 @@ spicetify apply
 
 ## Screeshots
 
-![Screenshot 1](/screenshots/screenshot_1.png)
+![Screenshot 1](/screenshots/Screenshot_1.png)
 
 ## Docs
 Check out [Spicetify's docs](https://spicetify.app/docs/development/spicetify-creator/the-basics)!
