@@ -1,6 +1,6 @@
-# Lucky LP - Spicetify Extension
+# LuckyLP - Spicetify Extension
 
-Lucky LP is a Spicetify Extension which allows to easily choose random album from your album collection. Just press the "Get Random Saved Album" button located in the header section of album collection page.
+LuckyLP is a Spicetify Extension which allows to easily choose random album from your album collection. Just press the "Get Random Saved Album" button located in the header section of album collection page.
 
 
 ## Installation
@@ -14,7 +14,7 @@ spicetify config extensions LuckyLP.js
 spicetify apply
 ```
 
-### Windows
+### Windows (Powershell)
 
 ```powershell
 wget https://raw.githubusercontent.com/Akasiek/spicetify-lucky-lp/main/LuckyLP.js
