@@ -17,7 +17,13 @@
     background-color: transparent;
     border: none;
 
+    svg {
+      fill:rgba(var(--spice-rgb-selected-row), .7);
 
+      &:hover {
+        fill: var(--spice-text);
+      }
+    }
 
     &:hover {
       background-color: rgba(var(--spice-rgb-selected-row), .1);
