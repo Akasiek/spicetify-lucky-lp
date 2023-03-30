@@ -1,7 +1,6 @@
 import renderButton from "./button";
 
 const mutate = () => {
-  console.log("MUTATE!");
   renderButton();
 };
 
