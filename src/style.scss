@@ -13,7 +13,6 @@
     padding: 8px;
 
     cursor: pointer;
-    color: rgba(var(--spice-rgb-selected-row), .7);
     background-color: transparent;
     border: none;
 
@@ -21,14 +20,17 @@
       fill:rgba(var(--spice-rgb-selected-row), .7);
 
       &:hover {
-        fill: var(--spice-text);
+
       }
     }
 
     &:hover {
       background-color: rgba(var(--spice-rgb-selected-row), .1);
       border-radius: 50%;
-      color: var(--spice-text);
+
+      svg {
+        fill: var(--spice-text);
+      }
     }
   }
 }
