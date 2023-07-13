@@ -1,6 +1,6 @@
 # LuckyLP - Spicetify Extension
 
-LuckyLP is a Spicetify Extension which allows to easily choose random album from your album collection. Just press the _"Get Random Saved Album"_ button located in the navigation section of home or album page.
+LuckyLP is a Spicetify Extension which allows to easily choose random album from your homepage. Just press the _"Get Random Saved Album"_ button located in the navigation section of home or album page.
 
 > **Note:** This extension only works with 
 > - Spicetify v2.20.0 and above
