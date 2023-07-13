@@ -1,8 +1,13 @@
 import { IAlbum, ISavedAlbums } from "./types/api";
 
-export const isAlbumCollectionPage = () => {
+export const isHomePage = () => {
   const pathname = Spicetify.Platform.History.location.pathname;
-  return pathname === "/collection/albums";
+  return pathname === "/";
+};
+
+export const isAlbumPage = () => {
+  const pathname = Spicetify.Platform.History.location.pathname;
+  return pathname.startsWith("/album/");
 };
 
 const getRandomAlbumIndex = (total: number): number =>
