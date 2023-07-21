@@ -6,6 +6,8 @@ LuckyLP is a Spicetify Extension which allows to easily choose random album from
 > - Spicetify v2.20.0 and above
 > - Spotify 1.2.15.828.g79f41970 and above
 
+![luckylp](https://github.com/Akasiek/spicetify-lucky-lp/assets/37307597/6fc31913-2304-4f28-b5c7-fafc6105affc)
+
 ## Installation
 
 ### Linux/MacOS
