@@ -49,7 +49,7 @@ export const handleClick = async () => {
       .join(",");
 
     Spicetify.showNotification(
-      `Chosen album: <strong>${album.album.name}</strong> by <i>${artistString}</i>`
+      `Chosen album: ${album.album.name} by ${artistString}`
     );
   } else {
     Spicetify.showNotification("Random album cannot be chosen.", true);
