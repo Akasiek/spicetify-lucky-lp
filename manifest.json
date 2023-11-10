@@ -2,7 +2,7 @@
   "name": "LuckyLP",
   "description": "Spicetify extension to add 'Get Random Saved Album' in user's Homepage",
   "preview": "screenshots/Extension_prev.png",
-  "main": "LuckyLP.js",
+  "main": "dist/LuckyLP.js",
   "readme": "README.md",
   "authors": [
     { "name": "Akasiek", "url": "https://github.com/Akasiek" }
