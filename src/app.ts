@@ -1,16 +1,20 @@
 import { toggleButton } from "./button";
 
 async function main() {
-  while (!Spicetify?.showNotification || !Spicetify?.Platform?.History) {
+  while (
+    !Spicetify?.showNotification &&
+    !Spicetify?.Platform?.History &&
+    !Spicetify?.CosmosAsync
+  ) {
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
 
   // Show button on app load
-  toggleButton();
+  toggleButton(Spicetify.Platform.History.location);
 
   // Show button depending on navigation
-  Spicetify.Platform.History.listen(() => {
-    toggleButton();
+  Spicetify.Platform.History.listen((location: Location) => {
+    toggleButton(location);
   });
 }
 

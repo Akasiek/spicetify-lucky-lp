@@ -1,8 +1,8 @@
 import ShuffleIcon from "./shuffleIcon";
-import { handleClick, isAlbumPage, isHomePage } from "./util";
+import { handleClick, isAlbumPage, isHomePage } from "./utils";
 
-export const toggleButton = () => {
-  if (isHomePage() || isAlbumPage()) {
+export const toggleButton = (location: Location) => {
+  if (isHomePage(location.pathname) || isAlbumPage(location.pathname)) {
     addButton();
   } else {
     removeButton();

@@ -1,31 +1,20 @@
 import { IAlbum, ISavedAlbums } from "./types/api";
+import { getAlbumsCount, getRandomAlbum } from "./services";
 
-export const isHomePage = () => {
-  const pathname = Spicetify.Platform.History.location.pathname;
+export const isHomePage = (pathname: string) => {
   return pathname === "/";
 };
 
-export const isAlbumPage = () => {
-  const pathname = Spicetify.Platform.History.location.pathname;
+export const isAlbumPage = (pathname: string) => {
   return pathname.startsWith("/album/");
 };
 
-const getRandomAlbumIndex = (total: number): number =>
-  Math.floor(Math.random() * (total + 1));
-
 const getRandomSavedAlbum = async (): Promise<false | IAlbum> => {
   try {
-    const result: ISavedAlbums = await Spicetify.CosmosAsync.get(
-      "https://api.spotify.com/v1/me/albums?limit=1",
-    );
+    const albumsCount = await getAlbumsCount();
 
-    if (result && result?.total) {
-      const albumsCount = result.total;
-      const randomIndex = getRandomAlbumIndex(albumsCount);
-      const randomResult: ISavedAlbums = await Spicetify.CosmosAsync.get(
-        `https://api.spotify.com/v1/me/albums?limit=1&offset=${randomIndex - 1}`,
-      );
-      const randomAlbum = randomResult.items[0];
+    if (albumsCount) {
+      const randomAlbum = await getRandomAlbum(albumsCount);
 
       Spicetify.Platform.History.push(`/album/${randomAlbum.album.id}`);
 
