@@ -1,16 +1,7 @@
-import { isAlbumPage, isHomePage } from "./util";
-import { addButton, removeButton } from "./button";
-
-const toggleButton = () => {
-  if (isHomePage() || isAlbumPage()) {
-    addButton();
-  } else {
-    removeButton();
-  }
-};
+import { toggleButton } from "./button";
 
 async function main() {
-  while (!Spicetify?.showNotification && !Spicetify?.Platform) {
+  while (!Spicetify?.showNotification || !Spicetify?.Platform?.History) {
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
 
