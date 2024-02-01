@@ -16,20 +16,19 @@ const getRandomAlbumIndex = (total: number): number =>
 const getRandomSavedAlbum = async (): Promise<false | IAlbum> => {
   try {
     const result: ISavedAlbums = await Spicetify.CosmosAsync.get(
-      "https://api.spotify.com/v1/me/albums?limit=1"
+      "https://api.spotify.com/v1/me/albums?limit=1",
     );
 
     if (result && result?.total) {
       const albumsCount = result.total;
-
       const randomIndex = getRandomAlbumIndex(albumsCount);
-
       const randomResult: ISavedAlbums = await Spicetify.CosmosAsync.get(
-        `https://api.spotify.com/v1/me/albums?limit=1&offset=${randomIndex - 1}`
+        `https://api.spotify.com/v1/me/albums?limit=1&offset=${randomIndex - 1}`,
       );
-
       const randomAlbum = randomResult.items[0];
+
       Spicetify.Platform.History.push(`/album/${randomAlbum.album.id}`);
+
       return randomAlbum;
     }
 
@@ -41,6 +40,7 @@ const getRandomSavedAlbum = async (): Promise<false | IAlbum> => {
 
 export const handleClick = async () => {
   Spicetify.showNotification("Choosing random album...");
+
   const album = await getRandomSavedAlbum();
 
   if (album !== false) {
@@ -49,7 +49,7 @@ export const handleClick = async () => {
       .join(",");
 
     Spicetify.showNotification(
-      `Chosen album: ${album.album.name} by ${artistString}`
+      `Chosen album: ${album.album.name} by ${artistString}`,
     );
   } else {
     Spicetify.showNotification("Random album cannot be chosen.", true);
